@@ -1,45 +1,23 @@
-import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
-import List from "./pages/list/List";
-import Single from "./pages/single/Single";
-import New from "./pages/new/New";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { productInputs, userInputs } from "./formSource";
-import "./style/dark.scss";
-import { useContext } from "react";
-import { DarkModeContext } from "./context/darkModeContext";
+import './App.css';
+import Navbar from './Navbar';
+import "./style.css"
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import {Route, Routes} from "react-router-dom";
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
-
   return (
-    <div className={darkMode ? "app dark" : "app"}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
-            <Route path="users">
-              <Route index element={<List />} />
-              <Route path=":userId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={userInputs} title="Add New User" />}
-              />
-            </Route>
-            <Route path="products">
-              <Route index element={<List />} />
-              <Route path=":productId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={productInputs} title="Add New Product" />}
-              />
-            </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <><Navbar />
+    <div className = "container">
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/Services" element={<Services/>}/>
+      <Route path="/About" element={<About/>}/>
+    </Routes>
     </div>
-  );
+    </>
+  )
 }
 
 export default App;
