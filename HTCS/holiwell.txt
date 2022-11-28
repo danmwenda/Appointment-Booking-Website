@@ -1,0 +1,13 @@
+HTCS
+.Creating a form - Full Names,ID number,phone number,Email,category of counselling,Submit
+.Create table - Full Names,ID number,phone number,Email,category of counselling
+.Create Counsellor's page - read,update(requires login and sign up)
+.Php session
+
+colour codes
+  #DFECDF- grey
+  #16850E - green
+  #002658 - blue
+  #512B00 - brown
+  #2E79DB - blue
+  #CE7006 - orange
