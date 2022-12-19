@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(body3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 90%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    width: 330px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:#fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #296EA2;
+    position: absolute;
+    left: 0;
+    bottom: -10;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    
+}
+.content h1{
+    font-size: 50px;
+    margin-top: 80px;
+    color: #CE7006;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 25px;
+    color: white;
+}
+#mybtn1{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 15px;
+    border: 4px solid #296EA2;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+#nomore{
+    background: #296EA2;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+#mybtn1:hover span{
+    width: 100%;
+}
+#mybtn1:hover{
+    border: none;
+}
+
+/*ABOUT PAGE */
+.section{
+    width: 100%;
+    height: 100vh;
+    background-color: #ddd;
+}
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+.content-section{
+    float: left;
+    width: 55%;
+}
+.image-section{
+    float: right;
+    width: 40%;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.content-section .title{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.content-section .content1 h3{
+    margin-top: 10px;
+    color: #5d5d5d;
+    font-size: 21px;
+}
+.content-section .content1 p{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.content-section .content1 h2{
+    margin-top: 8px;
+    color:#002658;
+    font-size: 21px;
+}
+#mybtn {
+    margin-top: 15px;
+    background-color: #3d3d3d;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+#mybtn:hover{
+    background-color: #CE7006;
+    color: white;
+}
+#more {
+    display: none;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/*OUR SERVICES PAGE */
+.section1{
+    width: 100%;
+    height: 100vh;
+    background-color: #ddd;
+}
+.content-section1{
+    width:60%;
+    float: right;
+}
+.image-section1{
+    width: 35%;
+    float: left;
+}
+.image-section1 img{
+    width: 100%;
+    height: 65%;
+}
+.content-section1 .title{
+    text-transform: uppercase;
+    font-size: 21px;
+    color:black ;
+    text-align: left;
+    margin-top: 0px;
+}
+.content-section1 .content2 h2{
+    margin-top: 15px;
+    color: #296EA2;
+    text-align: center;
+}
+.content-section1 .content2 ul{
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+        margin-top: 10px;
+}
+.content-section1 .content2 li{
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+
+}
+/*login*/
+
+form {
+    border: 3px solid #f1f1f1;
+    position:absolute;
+    top: 20%;
+    right:35%;
+    bottom:50%;
+    left:35%;
+    align-items: center;
+    text-align: center;
+  }
+  form h2{
+      color: #CE7006;
+  }
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+  }
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
